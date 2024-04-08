@@ -37,7 +37,7 @@ const signupStudent = async (req, res) => {
       const randomString =
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15);
-      const link = `${process.env.FEURL}/confirm/${randomString}`;
+      const link = `https://nihmath-zen-dashboard.netlify.app/confirm/${randomString}`;
    
   
       // hashed password
@@ -192,7 +192,7 @@ const forgotPassword = async (req, res) => {
       const randomString =
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15);
-      const link = `${process.env.FEURL}/reset/${randomString}`;
+      const link = `https://nihmath-zen-dashboard.netlify.app/reset/${randomString}`;
   
       // adding reset token to student db
       matchedStudent.resetToken = randomString;
